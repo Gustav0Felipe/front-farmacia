@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import './catalog.css'
 
 interface CatalogProps {
     id: number,
@@ -8,12 +7,14 @@ interface CatalogProps {
     foto: string
 }
 
-export function Catalog({id, nome, preco, foto} : CatalogProps){
+export function Catalogo({id, nome, preco, foto} : CatalogProps){
+    console.log(nome)
+    
     return(
     <>
-        <Link to={`/comprar/${id}`} ><img src={foto}/></Link>
-        <h2>{nome}</h2>
-        <p>Valor: {preco}</p>
+        <Link to={`/categoria/${id}`} ><img src={foto} className="w-30"/></Link>
+        <h2 className='text-black'>{nome}</h2>
+        <p className='text-black'>Valor: {preco}</p>
     </>
     )
 }
