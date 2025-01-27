@@ -4,10 +4,11 @@ interface CatalogProps {
     id: number,
     nome: string, 
     preco: number, 
-    foto: string
+    foto: string,
+    categoria: string
 }
 
-export function Catalogo({id, nome, preco, foto} : CatalogProps){
+export function Catalogo({id, nome, preco, foto, categoria} : CatalogProps){
     console.log(nome)
     
     return(
@@ -15,6 +16,7 @@ export function Catalogo({id, nome, preco, foto} : CatalogProps){
         <Link to={`/categoria/${id}`} ><img src={foto} className="w-30"/></Link>
         <h2 className='text-black'>{nome}</h2>
         <p className='text-black'>Valor: {preco}</p>
+        <p className='text-black'>Categoria: {categoria}</p>
     </>
     )
 }
