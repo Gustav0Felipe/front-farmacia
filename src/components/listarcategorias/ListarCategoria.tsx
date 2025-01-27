@@ -22,7 +22,7 @@ function ListaCategorias() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                        {categorias?.map((categoria) => (
                             categoria.produtos.map((produto) => (
-                                 <Catalogo key={produto.id} id={produto.id} nome={produto.nome} 
+                                 <Catalogo key={produto.id} id={categoria.id} nome={produto.nome} 
                                 preco={produto.preco} foto={produto.foto} 
                                 />
                             ))
